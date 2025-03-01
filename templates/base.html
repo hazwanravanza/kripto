@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tugas Kriptografi</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>SISTEM KRIPTOGRAFI STIN</h1>
+        </header>
+
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+        <footer>
+            <p style="letter-spacing: 3px; word-spacing: 4px;"> HAZWAN RAVANZA (22191129) & AYESHA SALMA (22191043)</p>
+            
+        </footer>
+
+    </body>
+</html>

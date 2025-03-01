@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block content %} 
+    <div class="container">
+        <form id="uploadForm">
+            <h3>ENCRYPT/DECRYPT FILE</h3>
+            <label for="fileInput">Upload File:</label>
+            <input type="file" id="fileInput" name="file" required><br><br>
+            <label for="key">Kunci:</label>
+            <input type="text" id="key" name="key" required>
+
+            <div id="combobox">
+                <label for="algorithm">Algoritma:</label>
+                <select id="algorithm" name="algorithm">
+                    <option value="XOR">Simple XOR</option>
+                    <option value="RC4">RC4</option>
+                    <option value="DES">DES</option>
+                    <option value="AES">AES</option>
+                </select><br><br>
+
+                <div id="kontainer" style="display:none;">
+                    <label for="mode">Mode:</label>
+                    <select id="mode" name="mode">
+                        <option value="ECB">ECB</option>
+                        <option value="CBC">CBC</option>
+                        <option value="CTR">Counter</option>
+                    </select><br><br>
+                </div> 
+            </div>
+
+            <button type="submit" id="Encrypt">Encrypt</button>
+            <button type="submit" id="Decrypt">Decrypt</button>
+        </form>
+
+        <form id="uploadTeks">
+            <h3>ENCRYPT/DECRYPT TEKS</h3>
+            <label for="text">Teks:</label>
+            <textarea id="text1" name="text1" required></textarea><br><br>
+            <label for="key1">Kunci:</label>
+            <input type="text" id="key1" name="key1" required>
+        
+        <div id="combobox">
+            <label for="algorithm1">Algoritma:</label>
+            <select id="algorithm1" name="algorithm1">
+                <option value="XOR">Simple XOR</option>
+                <option value="RC4">RC4</option>
+                <option value="DES">DES</option>
+                <option value="AES">AES</option>
+            </select><br><br>
+
+            <div id="kontainer1" style="display:none;">
+                <label for="mode1">Mode:</label>
+                <select id="mode1" name="mode1">
+                    <option value="ECB">ECB</option>
+                    <option value="CBC">CBC</option>
+                    <option value="CTR">Counter</option>
+                </select><br><br>
+            </div>       
+        </div>
+
+            <button type="submit" id="Encrypt1">Encrypt</button>
+            <button type="submit" id="Decrypt1">Decrypt</button>
+        </form>
+    </div>
+
+    <div id="fileDetails" style="display:none;">
+        <h3>Download File</h3>
+        <p id="fileName"></p>
+        <a id="downloadLink" href="" download>Download File</a>
+    </div>
+
+    <div id="hasil" style="display:none;">
+        <h2>Hasil</h2>
+        <textarea id="teksHasil" readonly></textarea>
+    </div>
+
+
+{% endblock %}
